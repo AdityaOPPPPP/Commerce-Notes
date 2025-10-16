@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f4f7fa;
+  color: #222;
+  transition: background 0.4s, color 0.4s;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  background: #004080;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ffd700;
+}
+
+#themeToggle {
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #004080, #0066cc);
+  color: white;
+  padding: 80px 60px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.hero span {
+  color: #ffd700;
+}
+
+.hero p {
+  margin: 20px 0;
+  font-size: 1.1rem;
+}
+
+.btn.primary {
+  background: #ffd700;
+  color: #004080;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn.primary:hover {
+  background: #fff;
+}
+
+/* Subjects */
+.subject {
+  padding: 60px;
+  text-align: center;
+}
+
+.subject h2 {
+  color: #004080;
+  margin-bottom: 30px;
+}
+
+.topics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  display: block;
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  text-decoration: none;
+  color: #004080;
+  font-weight: 500;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  background: #004080;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+  background: #004080;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Dark mode */
+body.dark {
+  background: #111;
+  color: #eee;
+}
+
+body.dark header,
+body.dark footer {
+  background: #1a1a1a;
+}
+
+body.dark .card {
+  background: #222;
+  color: #ffd700;
+}
+
+body.dark .card:hover {
+  background: #ffd700;
+  color: #111;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .subject {
+    padding: 40px 20px;
+  }
+}
